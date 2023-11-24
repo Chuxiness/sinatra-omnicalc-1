@@ -23,3 +23,14 @@ get ("/square_root/new") do
     erb(:square_root_results)
   end
   
+
+  get ("/random/new") do
+    erb(:new_randoms)
+    end
+    
+    get '/random/results' do
+      @random_number_generated=rand(params.fetch("min_number").to_f..params.fetch("max_number").to_f)
+      erb(:random_results)
+    end
+
+    

@@ -1,0 +1,25 @@
+<h1>
+  Random Results
+</h1>
+<dl>
+  <dt>
+    Minimum
+  </dt>
+  <dd>
+    <%=params.fetch("min_number")%>
+  </dd>
+
+  <dt>
+    Maximum
+  </dt>
+  <dd>
+    <%= params.fetch("max_number") %>
+  </dd>
+  
+  <dt>
+    Random Number
+  </dt>
+  <dd>
+    <%= @random_number_generated %>
+  </dd>
+</dl>
