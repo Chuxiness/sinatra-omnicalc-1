@@ -6,7 +6,7 @@
     APR
   </dt>
   <dd>
-    <%=params.fetch("apr_num")%>
+    <%=params.fetch("apr_num").to_f.to_fs(:percentage, {:precision =>4})%>
   </dd>
 
   <dt>
@@ -20,7 +20,7 @@
     Principal
   </dt>
   <dd>
-    <%= params.fetch("Principal_amount") %>
+    <%= params.fetch("Principal_amount").to_f.to_fs(:currency) %>
   </dd>
 
 
@@ -28,6 +28,7 @@
     Payment
   </dt>
   <dd>
-    <%= @monthly_payment %>
+  
+    <%= @monthly_payment.to_f.to_fs(:currency) %>
   </dd>
 </dl>

@@ -39,7 +39,7 @@ get ("/square_root/new") do
       
       get '/payment/results' do
         @numerator=params.fetch("apr_num").to_f/1200*params.fetch("Principal_amount").to_f
-        @denominator=1-1/(1+params.fetch("apr_num").to_f/1200)**params.fetch("number_of_years").to_f*12
+        @denominator=1-1/(1+params.fetch("apr_num").to_f/1200)**(params.fetch("number_of_years").to_f*12)
         @monthly_payment=@numerator/@denominator
         erb(:payment_results)
       end
