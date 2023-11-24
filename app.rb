@@ -14,3 +14,12 @@ end
 get '/square/results' do
   erb(:square_results)
 end
+
+get ("/square_root/new") do
+  erb(:new_square_root)
+  end
+  
+  get '/square_root/results' do
+    erb(:square_root_results)
+  end
+  
